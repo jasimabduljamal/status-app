@@ -1,13 +1,28 @@
 <template>
     <div>
-        <NavBar />
-    </div>
-    <div>
-        <RouterView />
+        <Header />
+        <div class="page-layout">
+            <div>
+                <SideNavBar />
+            </div>
+            <div class="view">
+                <RouterView />
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import NavBar from '@/components/NavBar.vue'
+import SideNavBar from '@/components/SideNavBar.vue'
+import Header from '@/components/Header.vue'
 </script>
-<style scoped></style>
+<style scoped>
+.page-layout {
+    display: flex;
+}
+
+.view {
+    margin-top: 70px;
+    width: 100%;
+}
+</style>
