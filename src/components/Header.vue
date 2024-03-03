@@ -8,7 +8,6 @@ const toggleNavbar = () => {
     // } else {
     //     navElement.style.display = 'none'
     // }
-    console.log(navElement.style.width)
     if (navElement.style.width === '0px') {
         navElement.style.width = '200px'
     } else {

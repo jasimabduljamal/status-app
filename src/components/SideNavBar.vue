@@ -5,18 +5,18 @@
         <div class="nav-heading">Status App</div>
 
         <div class="nav-links">
-            <a class="nav-menu-items" :href="'/monitor'">
+            <router-link class="nav-menu-items" to="/monitor">
                 <font-awesome-icon class="nav-menu-icon" :icon="['fas', 'globe']" />
                 <span class="nav-menu-name">Monitor</span>
-            </a>
-            <a class="nav-menu-items" :href="'/monitor'">
+            </router-link>
+            <router-link class="nav-menu-items" to="/system">
                 <font-awesome-icon class="nav-menu-icon" :icon="['fas', 'bars-progress']" />
                 <span class="nav-menu-name">System</span>
-            </a>
-            <a class="nav-menu-items" :href="'/monitor'">
+            </router-link>
+            <router-link class="nav-menu-items" to="/code">
                 <font-awesome-icon class="nav-menu-icon" :icon="['fas', 'code']" />
                 <span class="nav-menu-name">Code</span>
-            </a>
+            </router-link>
         </div>
     </nav>
 </template>
@@ -80,6 +80,10 @@ nav {
 }
 
 .nav-menu-items:hover {
+    background-color: var(--bg-separator);
+}
+
+.router-link-active {
     background-color: var(--bg-separator);
 }
 

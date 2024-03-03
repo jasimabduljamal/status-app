@@ -15,6 +15,9 @@
 <script setup lang="ts">
 import SideNavBar from '@/components/SideNavBar.vue'
 import Header from '@/components/Header.vue'
+import { onMounted } from 'vue'
+
+onMounted(() => {})
 </script>
 <style scoped>
 .page-layout {
