@@ -27,8 +27,10 @@ nav {
     flex-direction: column;
     background-color: var(--bg-secondary);
     height: 100vh;
-    min-width: 200px;
+    width: 200px;
     border-right: 1px solid var(--bg-tertiary);
+    overflow-x: hidden;
+    transition: 0.5s;
 }
 
 .hamburger-menu {
@@ -49,7 +51,7 @@ nav {
 
 @media only screen and (max-width: 992px) {
     nav {
-        display: none;
+        width: 0px;
     }
 }
 

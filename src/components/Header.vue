@@ -2,11 +2,23 @@
 const toggleNavbar = () => {
     const navElement = document.getElementById('navbar')
     if (!navElement) return
-    if (navElement.style.display === 'none') {
-        navElement.style.position = 'relative'
-        navElement.style.display = 'block'
+    // if (navElement.style.width === 'none') {
+    //     navElement.style.position = 'relative'
+    //     navElement.style.display = 'block'
+    // } else {
+    //     navElement.style.display = 'none'
+    // }
+    console.log(navElement.style.width)
+    if (navElement.style.width === '0px') {
+        navElement.style.width = '200px'
     } else {
-        navElement.style.display = 'none'
+        navElement.style.minWidth = 'none'
+        navElement.style.width = '0px'
+    }
+    if (window.innerWidth <= 992) {
+        navElement.style.position = 'fixed'
+    } else {
+        navElement.style.position = 'relative'
     }
 }
 </script>
