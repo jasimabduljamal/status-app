@@ -8,16 +8,17 @@ const toggleNavbar = () => {
     // } else {
     //     navElement.style.display = 'none'
     // }
-    if (navElement.style.width === '0px') {
-        navElement.style.width = '200px'
-    } else {
-        navElement.style.minWidth = 'none'
-        navElement.style.width = '0px'
-    }
     if (window.innerWidth <= 992) {
         navElement.style.position = 'fixed'
     } else {
         navElement.style.position = 'relative'
+    }
+    if (navElement.offsetWidth === 0) {
+        navElement.style.width = '200px'
+        navElement.style.borderRightWidth = '1px'
+    } else {
+        navElement.style.borderRightWidth = '0px'
+        navElement.style.width = '0px'
     }
 }
 </script>

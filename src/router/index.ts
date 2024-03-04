@@ -22,6 +22,11 @@ const router = createRouter({
             path: '/code',
             name: 'code',
             component: () => import('@/views/Dashboard.vue')
+        },
+        {
+            path: '/submenu/:id',
+            name: 'code',
+            component: () => import('@/views/Dashboard.vue')
         }
     ]
 })

@@ -48,5 +48,7 @@
     background-color: var(--bg-secondary);
     padding: 10px 0 10px 10px;
     width: 300px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 </style>
