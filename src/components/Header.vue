@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 const toggleNavbar = () => {
     const navElement = document.getElementById('navbar')
     if (!navElement) return
@@ -26,7 +29,7 @@ const toggleNavbar = () => {
 <template>
     <header>
         <div class="header">
-            <font-awesome-icon class="hamburger-icon" :icon="['fas', 'bars']" @click="toggleNavbar"/>
+            <font-awesome-icon class="hamburger-icon" :icon="faBars" @click="toggleNavbar" />
             <p>Status&nbsp;App</p>
         </div>
     </header>

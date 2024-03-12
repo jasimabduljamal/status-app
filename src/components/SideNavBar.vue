@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faGlobe, faBarsProgress, faComputer, faCode, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+
 import { onMounted } from 'vue'
 
 // onMounted(() => {
@@ -33,13 +36,13 @@ const showSubMenu = (menu: string, arrow: string) => {
         <ul class="nav-links">
             <li>
                 <router-link class="nav-menu-items" to="/monitor">
-                    <font-awesome-icon class="nav-menu-icon" :icon="['fas', 'globe']" />
+                    <font-awesome-icon class="nav-menu-icon" :icon="faGlobe" />
                     <span class="nav-menu-name">Monitor</span>
                 </router-link>
             </li>
             <li>
                 <router-link class="nav-menu-items" to="/system">
-                    <font-awesome-icon class="nav-menu-icon" :icon="['fas', 'bars-progress']" />
+                    <font-awesome-icon class="nav-menu-icon" :icon="faBarsProgress" />
                     <span class="nav-menu-name">System</span>
                 </router-link>
             </li>
@@ -47,10 +50,10 @@ const showSubMenu = (menu: string, arrow: string) => {
                 <div @click.stop="showSubMenu('submenus', 'submenu-arrow')" style="cursor: pointer">
                     <a class="nav-menu-items sub-menu-present">
                         <div style="display: flex; align-items: center">
-                            <font-awesome-icon class="nav-menu-icon" :icon="['fas', 'computer']" />
+                            <font-awesome-icon class="nav-menu-icon" :icon="faComputer" />
                             <span class="nav-menu-name">Sub&nbsp;Heading</span>
                         </div>
-                        <font-awesome-icon id="submenu-arrow" class="nav-menu-icon sub-menu-icon" :icon="['fas', 'chevron-down']" />
+                        <font-awesome-icon id="submenu-arrow" class="nav-menu-icon sub-menu-icon" :icon="faChevronDown" />
                     </a>
                 </div>
                 <ul id="submenus">
@@ -67,7 +70,7 @@ const showSubMenu = (menu: string, arrow: string) => {
             </li>
             <li>
                 <router-link class="nav-menu-items" to="/code">
-                    <font-awesome-icon class="nav-menu-icon" :icon="['fas', 'code']" />
+                    <font-awesome-icon class="nav-menu-icon" :icon="faCode" />
                     <span class="nav-menu-name">Code</span>
                 </router-link>
             </li>
