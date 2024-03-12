@@ -30,9 +30,6 @@ const showSubMenu = (menu: string, arrow: string) => {
 
 <template>
     <nav id="navbar">
-        <div class="nav-heading">
-            <p>Status&nbsp;App</p>
-        </div>
         <ul class="nav-links">
             <li>
                 <router-link class="nav-menu-items" to="/monitor">
@@ -88,6 +85,7 @@ const showSubMenu = (menu: string, arrow: string) => {
     border-right: 1px solid var(--bg-tertiary);
     overflow-x: hidden;
     transition: all 0.5s ease;
+    padding-top: 10px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -95,14 +93,6 @@ const showSubMenu = (menu: string, arrow: string) => {
         width: 0px;
         border-right-width: 0px;
     }
-}
-
-.nav-heading p {
-    padding: 20px 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--text-color);
-    margin-left: 46px;
 }
 
 .nav-links {

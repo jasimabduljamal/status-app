@@ -25,26 +25,44 @@ const toggleNavbar = () => {
 
 <template>
     <header>
-        <button class="hamburger-menu" @click="toggleNavbar">
-            <font-awesome-icon class="hamburger-icon" :icon="['fas', 'bars']" />
-        </button>
+        <div class="header">
+            <font-awesome-icon class="hamburger-icon" :icon="['fas', 'bars']" @click="toggleNavbar"/>
+            <p>Status&nbsp;App</p>
+        </div>
     </header>
 </template>
 
 <style scoped>
+header {
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+}
+
+.header p {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
 .hamburger-menu {
-    position: fixed;
     background: none;
     border: none;
     outline: none;
     box-shadow: none;
-    margin-left: 14px;
-    padding-top: 22px;
-    z-index: 999;
+    padding: 0px;
+    text-decoration: none;
 }
 
 .hamburger-icon {
     color: var(--icon-color);
-    padding: 3px;
+    cursor: pointer;
 }
 </style>
